@@ -23,9 +23,9 @@ include src/makefile-options
 
 # which layouts to compile (will override the variable in src/makefile-options)
 # --- default
-LAYOUT := qwerty-kinesis-mod
+LAYOUT := qwerty-mgsloan-mod
 # --- all
-LAYOUTS := qwerty-kinesis-mod dvorak-kinesis-mod colemak-symbol-mod
+LAYOUTS := qwerty-mgsloan-mod qwerty-kinesis-mod dvorak-kinesis-mod colemak-symbol-mod
 
 # system specific stuff
 UNAME := $(shell uname)
@@ -115,4 +115,3 @@ zip-all:
 	for layout in $(LAYOUTS); do \
 		make LAYOUT=$$layout zip; \
 	done
-
